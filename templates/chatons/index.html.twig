@@ -4,4 +4,10 @@
 
 {% block body %}
 <h1>Bienvenu sur la gestion des photo chaton</h1>
+    {% for d in dossiers %}
+        <a href="{{ path("voirDossier", {"dossier":d.filename}) }}">
+            {{ d.filename }}
+        </a>
+        <br>
+    {% endfor %}
 {% endblock %}
